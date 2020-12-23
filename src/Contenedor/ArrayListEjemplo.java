@@ -5,7 +5,7 @@ import java.util.*;
 public class ArrayListEjemplo {
 
 	public static void main(String[] args) {
-		// List -> ArrayList: está contruido sobre un arry
+		// List -> ArrayList: está contruido sobre un array
 		//		-> LinkedList: está contruido sobre los objectos node
 		// add(Objecto nuevo)
 		// remove(int posicion)

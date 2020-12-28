@@ -4,6 +4,7 @@ import java.util.*;
 
 public class ArrayListEjemplo {
 
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 		// List -> ArrayList: está contruido sobre un array
 		//		-> LinkedList: está contruido sobre los objectos node
@@ -48,6 +49,78 @@ public class ArrayListEjemplo {
 		for(String valor: nombres) {
 			System.out.println(valor);
 		}
+		
+		
+		
+		
+		
+		
+		// ¿Se puede ordenar una list? Sí utilizando  el método comparator
+		// Ejemplo:
+		
+		
+		class Coche implements Comparable<Coche>{
+			public String marca;
+			public String modelo;
+			public String color;
+			
+			public Coche(String marca, String modelo, String color) {
+				this.marca = marca;
+				this.modelo = modelo;
+				this.color = color;
+			}
+			
+			public int compareTo(Coche coche) {
+				return marca.equals(coche.marca) ? modelo.compareTo(coche.modelo): marca.compareTo(coche.marca);
+				
+			}
+		}
+		
+		
+		System.out.println("\n\nCOMO ORDENAR UN ARRAY LIST");
+		
+		
+		
+		List<Coche> listCoches = new ArrayList<Coche>();
+		
+		listCoches.add(new Coche("Renault", "Clio", "Rojo"));
+		listCoches.add(new Coche("Peugeot", "208", "Amarillo"));
+		listCoches.add(new Coche("Peugeot", "308", "Gris"));
+		listCoches.add(new Coche("Opel", "Corsa", "verde"));
+		listCoches.add(new Coche("Opel", "Astra", "Azul"));
+
+		// se han añadido tal y como se han insertado, al final de la lista
+		
+		// PRIMERA FORMA, implementar directamente el comparator:
+		
+		Collections.sort(listCoches, new Comparator<Coche>(){
+			@Override
+			public int compare(Coche c1, Coche c2) {
+				return c1.marca.equals(c2.marca) ? c1.modelo.compareTo(c2.modelo): c1.marca.compareTo(c2.marca);
+			}
+		});
+		
+		
+		for (Coche coche: listCoches) {
+			System.out.println(coche.marca + " " + coche.modelo + " " + coche.color);
+		}
+		
+	
+		// SEGUNDA FORMA
+
+		class ImplementarOrden implements Comparator<Coche> {
+			public int compare(Coche c1, Coche c2) {				
+				return c1.marca.equals(c2.marca) ? c1.modelo.compareTo(c2.modelo): c1.marca.compareTo(c2.marca);
+			}		
+		}
+		
+		Collections.sort(listCoches);
+		
+		
+		
 	}
+	
+	
+
 
 }

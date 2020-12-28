@@ -78,7 +78,17 @@ public class HashMapEjemplo {
 		}
 		
 		
+		Map <String, Coche> cochesMatrivulados = new HashMap<String, Coche>();
 		
+		
+		cochesMatrivulados.put("9827GW", new Coche("Renault", "Clio", "Rojo"));
+		cochesMatrivulados.put("9827GW", new Coche("Renault", "Clio", "Rojo")); 
+		System.out.println();
+		for (String clave: cochesMatrivulados.keySet()) {
+			
+			Coche coche = cochesMatrivulados.get(clave);
+			System.out.println("La clave es: " + clave + "  y el valor es:\n    "+cochesMatrivulados.get(clave));
+		}
 		
 	}
 	

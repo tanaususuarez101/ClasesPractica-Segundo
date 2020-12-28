@@ -59,7 +59,26 @@ public class ArrayListEjemplo {
 		// Ejemplo:
 		
 		
-		class Coche implements Comparable<Coche>{
+		
+		
+		
+		class Caja <T, O>{
+			ArrayList<T> elementos;
+			O tamaño;
+			
+			public Caja(O tamaño){
+				elementos = new ArrayList<T>();
+				this.tamaño = tamaño;
+			}
+		}
+		
+		Caja<String,Integer> caja = new Caja<String,Integer>(3);
+		Caja<String,Integer> caja1 = new Caja<String,Integer>(3);
+		Caja<String,Integer> caja2 = new Caja<String,Integer>(3);
+		
+		
+		
+		class Coche implements Comparable<Coche>{ 
 			public String marca;
 			public String modelo;
 			public String color;
@@ -70,6 +89,7 @@ public class ArrayListEjemplo {
 				this.color = color;
 			}
 			
+			@Override
 			public int compareTo(Coche coche) {
 				return marca.equals(coche.marca) ? modelo.compareTo(coche.modelo): marca.compareTo(coche.marca);
 				

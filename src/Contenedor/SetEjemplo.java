@@ -38,9 +38,19 @@ public class SetEjemplo {
 				this.modelo = modelo;
 				this.color = color;
 			}
-			
+			@Override
 			public int compareTo(Coche coche) {
 				return marca.equals(coche.marca) ? modelo.compareTo(coche.modelo): marca.compareTo(coche.marca);
+				
+			}
+			
+			@Override
+			public boolean equals(Object arg0) {
+				if (arg0 instanceof Coche) {
+					Coche coche = (Coche) arg0;
+					return marca.equals(coche.marca) && modelo.equals(coche.modelo) && color.equals(coche.color);
+				}
+				return false;
 				
 			}
 		}
@@ -62,10 +72,10 @@ public class SetEjemplo {
 		
 		Set <Coche> setDeCoche = new HashSet<>();
 		
+		Coche RenauClioRojo = new Coche("Renault", "Clio", "Rojo");
 		
-		
-		setDeCoche.add(new Coche("Renault", "Clio", "Rojo"));
-		setDeCoche.add(new Coche("Renault", "Clio", "Rojo")); // no se añade, por que está repetido, se hace en base al método compareTo
+		setDeCoche.add(RenauClioRojo);
+		setDeCoche.add(RenauClioRojo); // no se añade, por que está repetido, se hace en base al método compareTo
 		setDeCoche.add(new Coche("Peugeot", "208", "Amarillo"));
 		setDeCoche.add(new Coche("Peugeot", "308", "Gris"));
 		setDeCoche.add(new Coche("Opel", "Corsa", "verde"));
@@ -77,7 +87,8 @@ public class SetEjemplo {
 			System.out.println(coche.marca + " " + coche.modelo + " " + coche.color);
 		}
 		// Para eliminar un elemento de un set debemos conocer que elemento es (esto puede ser un inconveniente):
-		setDeCoche.remove(new Coche("Renault", "Clio", "Rojo"));
+		
+		setDeCoche.remove(RenauClioRojo);
 		System.out.println("\n- Elemento eliminado:");
 		for (Coche coche: setDeCoche) {
 			System.out.println(coche.marca + " " + coche.modelo + " " + coche.color);

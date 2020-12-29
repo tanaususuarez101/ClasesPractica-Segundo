@@ -11,10 +11,7 @@ Double setPrecio(); -> indica precio del producto
 Ésta debe implementar los siguientes métodos:
 
 boolean add(Juego) -> añade un juego
-void setOrder -> establece el orden que se geenra en la lista con getList()
+void setOrder -> establece el orden que se genera en la lista con getList()
 List getList<> -> devuelve la lista de juego ordenada
 Set<String> -> Devuelve un conjunto de nombre
-
-
-
 

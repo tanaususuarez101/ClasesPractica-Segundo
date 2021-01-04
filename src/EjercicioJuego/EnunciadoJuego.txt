@@ -1,4 +1,4 @@
-1. Desarrolla los métodos de la clase juego que debe implementar  la interfaz llamada Venta, donde deba aparecer los  siguiente mmétodos:
+1. Desarrolla los metodos de la clase juego que debe implementar  la interfaz llamada Venta, donde deba aparecer los  siguiente metodos:
 
 int getId(); -> Devuelve el identificador
 Double getPrecio(); -> Obtiene el valor del producto
@@ -7,8 +7,8 @@ Double setPrecio(); -> indica precio del producto
 2. La clase Juego se da parcialmente desarrollada
 
 
-3. Desarrolla la clase Tienda, donde implementa una colección ordenada y no repetido de juegos que tiene la tienda en sus estanterías.
-Ésta debe implementar los siguientes métodos:
+3. Desarrolla la clase Tienda, donde implementa una coleccion ordenada y no repetido de juegos que tiene la tienda en sus estanterias.
+Esta debe implementar los siguientes metodos:
 
 boolean add(Juego) -> añade un juego
 void setOrder -> establece el orden que se genera en la lista con getList()

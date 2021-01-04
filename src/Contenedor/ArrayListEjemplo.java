@@ -64,11 +64,11 @@ public class ArrayListEjemplo {
 		
 		class Caja <T, O>{
 			ArrayList<T> elementos;
-			O tamaño;
+			O tamano;
 			
-			public Caja(O tamaño){
+			public Caja(O tamano){
 				elementos = new ArrayList<T>();
-				this.tamaño = tamaño;
+				this.tamano = tamano;
 			}
 		}
 		

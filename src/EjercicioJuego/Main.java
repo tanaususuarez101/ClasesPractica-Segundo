@@ -17,6 +17,8 @@ public class Main {
 			System.out.println(juego.titulo + ", " + juego.Descripcion + ", " + juego.plataforma + ", " + juego.getId());			
 		}
 		
+		Set<String>set1= oliver.setNombre();
+		System.out.println(set1);
 	}
 
 }

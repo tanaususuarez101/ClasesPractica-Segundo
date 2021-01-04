@@ -47,6 +47,14 @@ public class Tienda {
 		return estanteria;
 	}
 	
-	
+	public Set<String> setNombre(){
+		Set<String> setDeString = new HashSet<String>();
+		
+		for(int i = 0; i < estanteria.size(); i++) {
+			setDeString.add(estanteria.get(i).getTitulo());					
+		}
+		
+		return setDeString;
+	}
 	
 }

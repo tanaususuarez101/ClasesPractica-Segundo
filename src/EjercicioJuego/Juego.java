@@ -17,6 +17,11 @@ public class Juego implements Venta, Comparable<Juego> {
 		this.id = id;
 	}
 	
+	//Cree un getNombre para poder tener un Set de los nombres en la tienda
+	
+	public String getTitulo() {
+		return this.titulo;
+	}
 	
 	public int getId() {
 		return id;

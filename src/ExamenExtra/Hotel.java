@@ -13,15 +13,18 @@ public class Hotel extends TouristProduct {
 	public void setDiscount(double descuento) {
 		this.descuento = descuento;
 	}
-		
+	
+	@Override
 	public double getPrice() {
 		return this.precio;
 	}
 	
+	@Override
 	public double getPriceWithDiscount() {
 		return this.precio - (this.precio*this.descuento);
 	}
 	
+	@Override
 	public double getDiscount() {
 		return this.descuento;
 	}

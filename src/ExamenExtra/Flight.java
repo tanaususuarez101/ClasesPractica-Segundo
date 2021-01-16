@@ -14,14 +14,17 @@ public class Flight extends TouristProduct {
 		this.descuento = descuento;
 	}
 	
+	@Override
 	public double getPrice() {
 		return this.precio;
 	}
 	
+	@Override
 	public double getPriceWithDiscount() {
 			return this.precio - this.precio * this.getDiscount();
 	}
 	
+	@Override
 	public double getDiscount() {
 		if(this.descuento) return 0.75;
 		else return 0;
